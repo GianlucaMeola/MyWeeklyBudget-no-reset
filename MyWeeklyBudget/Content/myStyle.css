@@ -1,0 +1,285 @@
+﻿/*BUTTON DESIGN*/
+.bottone {
+  padding: 0.7em 0.7em;
+  font-size: 1em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(35, 188, 224);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px rgb(153, 153, 153);
+  margin-bottom:5px;
+}
+.bottoneR {
+  padding: 0.7em 0.7em;
+  font-size: 0.7em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px rgb(153, 153, 153);
+  margin-bottom:5px;
+}
+
+#restartBtn{
+    float: right;
+}
+
+.bottonef {
+  padding: 0.7em 0.7em;
+  font-size: 1.5em;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(21, 14, 206);
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px rgb(153, 153, 153);
+  margin-bottom:5px;
+}
+
+/* Creatin blinking form final button */
+.flashit{
+	-webkit-animation: flash linear 1s infinite;
+	animation: flash linear 1s infinite;
+}
+@-webkit-keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+@keyframes flash {
+	0% { opacity: 1; } 
+	50% { opacity: .1; } 
+	100% { opacity: 1; }
+}
+
+@media only screen and (max-width: 600px){
+    .bottone{
+        font-size: 0.5em;
+    }
+}
+
+.bottone:hover {background-color: rgb(131, 213, 232);}
+
+.bottone:active {
+  background-color: rgb(36, 130, 152);
+  box-shadow: 0 2px rgb(102, 102, 102);
+  transform: translateY(4px);
+}
+
+
+/*STATIC STYLE CSS*/
+body {
+    background: linear-gradient(to bottom right, rgb(255, 255, 255),rgba(255, 255, 255, 0.65)),url('img/background.jpeg');
+    /*background-image: url('img/background.jpeg');*/
+    background-repeat: no-repeat;
+	background-position: center 0;
+	background-size: cover;
+	background-attachment: fixed;
+	width: 100%;
+    padding: 0;
+}
+
+#title{
+    color: black !important;
+    text-shadow: 2px 2px 4px gray !important;
+}
+
+Label{
+    margin-bottom:0;
+    margin-top: 5px;
+}
+
+.mainDivG{
+    min-height: 95vh;
+    padding-top: 35vh;
+}
+.jumbotron{
+    min-height:100vh;
+    background-color:rgba(163, 203, 217, 0.58);
+}
+
+#inputDiv{
+    border-radius: 7px;
+    overflow:hidden
+}
+
+#inputDiv .row{
+    background-color: rgba(255, 255, 255, 0.5); 
+    padding:1.5em;
+}
+
+#exspesesDiv{
+    height:30em; 
+    background-color:rgba(229, 235, 159, 0.54); 
+    border-radius: 20px; 
+    border-style: solid;
+    backface-visibility: hidden;
+
+}
+#inputDiv h2{
+margin:0;
+}
+
+#incomeDiv{
+    height: 30em; 
+    background-color:rgba(159, 235, 210, 0.54); 
+    border-radius: 20px; 
+    border-style: solid;
+    backface-visibility: hidden;
+
+}
+.carta{
+    margin-bottom:2em;
+    
+}
+.cardBack{
+    min-width:100%;
+    min-height:30em; 
+    margin-top:-30em; 
+    border-radius:20px;
+    backface-visibility: hidden;
+}
+
+#expensesBack{
+    background-color:rgba(229, 235, 159, 0.54);
+    border: solid;
+}
+
+#incomeBack{
+    background-color: rgba(159, 235, 210, 0.54);
+    border: solid;
+}
+
+.cardBack>.row{
+    background:none !important;
+}
+
+#finalChar{
+    margin-top: 0;
+    background-color: rgba(0, 100, 240, 0.54);
+    border: solid;
+    animation-duration: 1.5s;
+    
+}
+.box-ombra{
+    box-shadow: 5px 5px 5px grey;
+}
+
+
+/*DYNAMIC STYLE CSS+C#+BOOSTRP+AMIMATED*/
+/*class after frist button pressed succesfully*/
+.classMainFB{
+    overflow: hidden;
+    animation: collassa 3s;
+    padding-top: 0;
+}
+.classMainFB2{
+    padding-top: 0;
+    overflow: hidden;
+}
+/*animazione collapse*/
+@keyframes collassa{
+    from{ padding-top:35vh; }
+    to{ padding-top: 0vh;}
+}
+.collassa{
+    height:0;
+    overflow: hidden;
+    animation: scompari 3s;
+    animation-delay: 0;
+}
+@keyframes arravoglia{
+    from{height:1000px;}
+    to{height:0;}
+}
+
+.nascondi{
+    overflow: hidden;
+    animation:arravoglia;
+    animation-duration: 5s;
+    animation-delay: 0;
+}
+.nascosto{
+    overflow: hidden;
+    max-height:0;
+}
+
+@keyframes mostra {
+    from {max-height: 0;}
+    to {max-height: 500px;}
+}
+
+.deploy{
+    overflow: hidden;
+    animation:mostra;
+    animation-duration: 3s;
+    animation-delay: 0;
+}
+
+@keyframes accorcia {
+    from {max-height: 500px;}
+    to {max-height: 0px;}
+}
+            
+.nascondi2{
+    overflow: hidden;
+    animation: accorcia;
+    animation-duration: 3s;
+    animation-delay: 0;
+}
+
+.nascosto2{
+    overflow:hidden;
+    max-height:0;
+}
+
+
+/*SECOND STEP AFTER FIRST BUTTON ORG*/
+
+ .fadeIn{
+    animation-delay:2s;
+    animation-duration:3s;
+}
+ /*FRONT ROTATION ANIMATION*/
+ .rotate{
+    transform: perspective(1800px) rotateY(-180deg);
+    transition: transform 2.5s linear 0s;
+    animation: rota1 3s;
+ }
+
+@keyframes rota1{
+   from{transform:perspective(1800px) rotateY(0deg); }
+   to{transform:perspective(1800px) rotateY(-180deg);}
+}
+
+.rotate2{
+    transform: perspective(1800px) rotateY(0deg);
+    transition: transform 2.5s linear 0s;
+    animation: rota2 3s;
+ }
+
+@keyframes rota2{
+    from{transform:perspective(1800px) rotateY(180deg); }
+   to{transform:perspective(1800px) rotateY(0deg);}
+}
+
+.rotato{
+    transform: perspective(1800px) rotateY(-180deg);
+}
+.rotato2{
+    transform:perspective(1800px) rotateY(0deg);
+}
+
+
+/*ERROR MESSAGE STYLE*/
+#lblErrorGoalInput, #lblErrorEspenses, #lblErrorIncome{
+    color: red;
+}
